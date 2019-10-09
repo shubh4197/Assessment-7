@@ -4,6 +4,7 @@ import {Employee} from './Employee.modal'
   providedIn: 'root'
 })
 export class EmployeeService {
+  id:number=0;
   emp:Employee[]=[];
   constructor() { }
 }

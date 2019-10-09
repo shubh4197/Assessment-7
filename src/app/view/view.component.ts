@@ -10,13 +10,13 @@ import { Employee } from '../Employee.modal';
 export class ViewComponent implements OnInit {
   name1:string=""
   user:Employee[]=[];
-  constructor(private name:EmployeeService) { }
+  constructor(private nam:EmployeeService) { }
   
   ngOnInit() {
   }
 
   search(){
-   this.name.emp.forEach(element=>{
+   this.nam.emp.forEach(element=>{
      if(element.personal.name==this.name1)
      {
        this.user.push(element)

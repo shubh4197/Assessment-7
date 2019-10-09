@@ -26,8 +26,8 @@ export class HomeComponent implements OnInit {
 
   add(){
   
-  this.emp.emp.push(new Employee(this.emp.emp.length,new personal(this.name,this.dob,this.home,this.phone),new Edu(this.degree,this.marks,this.stream,this.college)));
-  
+  this.emp.emp.push(new Employee(this.emp.id,new personal(this.name,this.dob,this.home,this.phone),new Edu(this.degree,this.marks,this.stream,this.college)));
+  this.emp.id++;
   console.log(this.emp.emp);
   
   }
