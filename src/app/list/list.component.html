@@ -1,0 +1,33 @@
+<div class="container-fluid">
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Degree</th>
+                    <th scope="col">Marks</th>
+                    <th scope="col">College</th>
+                    <th scope="col">Stream</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let em of emp.emp">
+                   
+                    <td>{{em.personal.name}}</td>
+                    <td>{{em.personal.dob}}</td>
+                    <td>{{em.personal.homeaddress}}</td>
+                    <td>{{em.personal.phone}}</td>
+                    <td>{{em.educational.Degree}}</td>
+                    <td>{{em.educational.Marks}}</td>
+                    <td>{{em.educational.College}}</td>
+                    <td>{{em.educational.Stream}}</td>
+                  <a type="submit" routerLink="/personal/{{em.id}}" class="btn btn-primary">Edit Personal Details</a>  
+                  <a type="submit" routerLink="/edu/{{em.id}}" class="btn btn-primary">Edit Educational Details</a>  
+                  <a type="submit" (click)=delete(em.id) class="btn btn-danger">Delete</a>
+                </tr>
+                  
+                </tbody>
+              </table>
+</div>

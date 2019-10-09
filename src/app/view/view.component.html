@@ -1,0 +1,26 @@
+<form (ngSubmit)="search()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" name="name" [(ngModel)]="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+         
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">Name</th>
+                <th scope="col">Dob</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let use of user">
+                
+                <td>{{use.name}}</td>
+                <td>{{use.dob}}</td>
+                <td>{{use.phone}}</td>
+              </tr>
+              </tbody>
+              </table>
